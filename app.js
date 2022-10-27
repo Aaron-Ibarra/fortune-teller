@@ -2,6 +2,7 @@ const submitSection = document.getElementById('submit-section');
 const answerSection = document.getElementById('answer-section');
 const submitBtn = document.getElementById('submit');
 const resetBtn = document.getElementById('reset');
+const userInput = document.getElementById('user-input');
 const answers = [
     'Yes, definitely',
     'It is certain',
@@ -31,8 +32,13 @@ function toggleClass() {
 
 submitBtn.addEventListener('click', () => {
     const answer = document.getElementById('answer');
-    const chosenAnswer = Math.floor(Math.random() * answers.length);
-    answer.textContent = answers[chosenAnswer].textValue;
+    if (userInput.value === '') {
+        answer.textContent = 'Well you gotta say something man';
+    } else {
+        const chosenAnswer = Math.floor(Math.random() * answers.length);
+        answer.textContent = answers[chosenAnswer];
+    }
+    userInput.value = '';
     toggleClass();
 });
 

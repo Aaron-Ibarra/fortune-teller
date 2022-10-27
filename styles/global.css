@@ -1,6 +1,6 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
+    --background: rgb(144, 118, 175);
+    --header-background: rgb(255, 255, 255);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
@@ -10,6 +10,7 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+    justify-content: center;
 }
 
 header {
@@ -19,6 +20,7 @@ header {
     height: 80px;
 
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 
@@ -40,4 +42,17 @@ main {
 
 #eight-ball {
     width: 200px;
+    justify-content: center;
+    align-content: center;
+}
+
+#display-message {
+    font-size: 30px;
+}
+#answer {
+    font-size: 30px;
+}
+#user-input {
+    justify-content: center;
+    width: 400px;
 }
