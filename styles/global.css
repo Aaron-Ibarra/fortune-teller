@@ -37,3 +37,7 @@ main {
 .hide {
     display: none;
 }
+
+#eight-ball {
+    width: 200px;
+}
